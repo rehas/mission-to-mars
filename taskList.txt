@@ -1,0 +1,7 @@
+- Setup git
+- Put Readme
+- Initial commit
+
+- Main class
+    - Run
+- Organize other classes
