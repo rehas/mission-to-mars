@@ -1,7 +1,7 @@
-- Setup git
-- Put Readme
-- Initial commit
++ Setup git
++ Put Readme
++ Initial commit
 
-- Main class
-    - Run
++ Main class
+    + Run
 - Organize other classes
