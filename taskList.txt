@@ -40,7 +40,7 @@ PART 2: The simulation
         + loadItems should read the text file line by line and
             create an Item object for each and then add it to an ArrayList of Items.
             The method should then return that ArrayList.
-        HERE=> test Methods generated so far.
+        + test Methods generated so far.
         - loadU1: this method takes the ArrayList of Items returned from loadItems and
             starts creating U1 rockets.
             - It first tries to fill up 1 rocket with as many items as possible
