@@ -1,9 +1,9 @@
 public class Rocket implements SpaceShip {
 
-    private int cost;
-    private final int baseWeight;
-    private final int maxWeight;
-    private int currentWeight;
+    protected int cost;
+    protected final int baseWeight;
+    protected final int maxWeight;
+    protected int currentWeight;
 
     public Rocket(int baseWeight, int cost, int maxWeight) {
         this.baseWeight = baseWeight;
