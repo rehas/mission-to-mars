@@ -30,9 +30,9 @@
     + return either true or false based on a random number using the probability equation for each.
 
 PART 2: The simulation
-HERE=> Create a Simulation class that
+- Create a Simulation class that
     - is responsible for reading item data and filling up the rockets. The Simulation class should include these methods:
-        - loadItems: this method loads all items from a text file and returns an ArrayList of Items:
+        HERE=> loadItems: this method loads all items from a text file and returns an ArrayList of Items:
         - Each line in the text file consists of the item name followed by = then its weigh in kg. For example:
         - habitat=100000
         - colony=50000
