@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Simulation {
 
+
     private Integer totalBudget;
 
     public void updateBudget(Rocket r){
@@ -38,10 +39,10 @@ public class Simulation {
 
     }
 
-    public ArrayList<Rocket> loadU1 (ArrayList<Item> itemsForU1){
+    public ArrayList<U1> loadU1 (ArrayList<Item> itemsForU1){
 
         U1 ship = new U1();
-        ArrayList<Rocket> fleetU1 = new ArrayList<>();
+        ArrayList<U1> fleetU1 = new ArrayList<U1>();
         for (int i = 0; i< itemsForU1.size(); i++ ){
 
             Item it = itemsForU1.get(i);
@@ -57,9 +58,9 @@ public class Simulation {
         return fleetU1;
     }
 
-    public ArrayList<Rocket> loadU2 (ArrayList<Item> itemsForU2){
+    public ArrayList<U2> loadU2 (ArrayList<Item> itemsForU2){
         U2 ship = new U2();
-        ArrayList<Rocket> fleetU2 = new ArrayList<>();
+        ArrayList<U2> fleetU2 = new ArrayList<U2>();
         for (int i = 0; i< itemsForU2.size(); i++ ){
 
             Item it = itemsForU2.get(i);
@@ -74,5 +75,30 @@ public class Simulation {
             }
         }
         return fleetU2;
+    }
+
+    public <T extends Rocket> float runSimulation(ArrayList< T> rocketsToTest){
+        float budget = 0;
+        int count = 1;
+
+        for (int i =0; i<rocketsToTest.size(); i++){
+            T r = rocketsToTest.get(i);
+
+            boolean isThisRocketSuccessful = r.launch() && r.land();
+
+            if(!isThisRocketSuccessful){
+                count++;
+                System.out.println("Rocket at index ["+i+"] crashed");
+                i--;
+            }else{
+                count =1;
+            }
+
+
+            budget += count * r.cost;
+
+        }
+
+        return budget;
     }
 }
