@@ -38,11 +38,41 @@ public class Simulation {
 
     }
 
-    public ArrayList<U1> loadU1 (ArrayList<Item> itemsForU1){
-        return new ArrayList<>();
+    public ArrayList<Rocket> loadU1 (ArrayList<Item> itemsForU1){
+
+        U1 ship = new U1();
+        ArrayList<Rocket> fleetU1 = new ArrayList<>();
+        for (int i = 0; i< itemsForU1.size(); i++ ){
+
+            Item it = itemsForU1.get(i);
+
+            if(!ship.canCarry(it)){
+                fleetU1.add(ship);
+                ship = new U1();
+                i--;
+            }else{
+                ship.carry(it);
+            }
+        }
+        return fleetU1;
     }
 
-    public ArrayList<U2> loadU2 (ArrayList<Item> itemsForU1){
-        return new ArrayList<>();
+    public ArrayList<Rocket> loadU2 (ArrayList<Item> itemsForU2){
+        U2 ship = new U2();
+        ArrayList<Rocket> fleetU2 = new ArrayList<>();
+        for (int i = 0; i< itemsForU2.size(); i++ ){
+
+            Item it = itemsForU2.get(i);
+
+
+            if(!ship.canCarry(it)){
+                fleetU2.add(ship);
+                ship = new U2();
+                i--;
+            }else{
+                ship.carry(it);
+            }
+        }
+        return fleetU2;
     }
 }
