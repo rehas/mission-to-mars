@@ -20,5 +20,14 @@ public class Main {
         for (Item i : a){
             System.out.println(i.name + " " + Integer.toString( i.weight));
         }
+
+        ArrayList<Rocket> U1Fleet = sm.loadU1(a);
+
+        for (Rocket u1 : U1Fleet){
+
+            System.out.println(u1.currentWeight + " " + u1.maxWeight);
+        }
+
+
     }
 }
