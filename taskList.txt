@@ -49,19 +49,19 @@ PART 2: The simulation
         + loadU2: this method also takes the ArrayList of Items and starts creating U2 rockets
             and filling them with those items the same way as with U1 until all items are loaded.
             + The method then returns the ArrayList of those U2 rockets that are fully loaded.
-        HERE=> runSimulation: this method takes an ArrayList of Rockets and calls launch and
-            - land methods for each of the rockets in the ArrayList.
-            - Every time a rocket explodes or crashes (i.e if launch or land return false)
+        + runSimulation: this method takes an ArrayList of Rockets and calls launch and
+            + land methods for each of the rockets in the ArrayList.
+            + Every time a rocket explodes or crashes (i.e if launch or land return false)
                 it will have to send that rocket again.
-            - All while keeping track of the total budget required to send each rocket safely to Mars.
+            + All while keeping track of the total budget required to send each rocket safely to Mars.
                 runSimulation then returns the total budget required to send all rockets (including the crashed ones).
 
 
 PART 3: Running the Simulation
-- Create a Main class with the main method and start running the simulation:
++ Create a Main class with the main method and start running the simulation:
 
-- Create a Simulation object
-- Load Items for Phase-1 and Phase-2
++ Create a Simulation object
++ Load Items for Phase-1 and Phase-2
 - Load a fleet of U1 rockets for Phase-1 and then for Phase-2
 - Run the simulation using the fleet of U1 rockets and display the total budget required.
 - Repeat the same for U2 rockets and display the total budget for that.
