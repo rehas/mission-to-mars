@@ -5,7 +5,7 @@ public class U2 extends Rocket {
 
     @Override
     public boolean launch() {
-        double probabilityOfExplosion = 0.04 * (currentWeight / maxWeight);
+        double probabilityOfExplosion = 0.04 * (currentWeight *1.00 / maxWeight);
 
         double chance  = Math.random();
 
@@ -18,7 +18,7 @@ public class U2 extends Rocket {
 
     @Override
     public boolean land() {
-        double probabilityOfExplosion = 0.08 * (currentWeight/maxWeight);
+        double probabilityOfExplosion = 0.08 * (currentWeight * 1.00/maxWeight);
         double chance = Math.random();
 
         if(chance >= probabilityOfExplosion){
