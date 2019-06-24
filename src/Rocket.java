@@ -1,4 +1,4 @@
-public class Rocket implements SpaceShip {
+public abstract class Rocket implements SpaceShip {
 
     protected int cost;
     protected final int baseWeight;
@@ -12,15 +12,9 @@ public class Rocket implements SpaceShip {
         this.currentWeight = baseWeight;
     }
 
-    @Override
-    public boolean launch() {
-        return true;
-    }
+    public abstract boolean launch();
 
-    @Override
-    public boolean land() {
-        return true;
-    }
+    public abstract boolean land() ;
 
     @Override
     public boolean canCarry(Item item) {
